@@ -48,6 +48,6 @@ The script will automatically:
 
 ## *Challenge proof*
 
-On the devnet search for `WinterIsComing` token names.
+Issue transaction hashes: [txs_hash.txt](txs_hash.txt)
 
 ### [HOME](../README.md)
