@@ -1,4 +1,5 @@
 .DS_Store
 .venv/
+_live/
 _accounts/
 _tokens/

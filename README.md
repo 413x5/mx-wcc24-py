@@ -31,4 +31,4 @@ Generated files are stored in:
 Issues WINTER fungible tokens to each account generated in step 01 and saves the token IDs.
 
 Generated files are stored in:
-- `_accounts/tokens/` - Token IDs for each account
+- `_tokens/` - Token IDs for each account
