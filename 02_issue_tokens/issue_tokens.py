@@ -13,7 +13,7 @@ GATEWAY = "https://devnet-gateway.multiversx.com"
 PROXY = ProxyNetworkProvider(GATEWAY)
 
 TOKENS_PER_ACCOUNT=1
-TOKEN_NAME="WICT" #"WinterIsComing"
+TOKEN_NAME="WinterIsComing"
 TOKEN_TICKER_NAME="WINTER"
 TOKEN_INITIAL_SUPPLY=100000000
 TOKEN_DECIMALS=8

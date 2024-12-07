@@ -46,4 +46,8 @@ The script will automatically:
 3. Save token information
 4. Monitor transaction status
 
+## *Challenge proof*
+
+On the devnet search for `WinterIsComing` token names.
+
 ### [HOME](../README.md)

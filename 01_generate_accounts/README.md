@@ -7,7 +7,7 @@ This script generates MultiversX accounts on the devnet and requests xEGLD from 
 Before running the script, ensure you have:
 1. Set up the Python environment (see main [README](../README.md))
 2. Created a `wallets_password.txt` file in the root directory containing the password for encrypting the wallets
-3. `mxpy` installed for automated faucet funding requests
+3. `mxpy` installed for automated faucet funding requests. Details [here](https://docs.multiversx.com/sdk-and-tools/sdk-py/installing-mxpy)
 
 ## Features
 
@@ -40,5 +40,9 @@ python3 generate_accounts.py
 - The script is configured for devnet by default (CHAIN = "D")
 - Current configuration: 3 shards, 3 accounts per shard (total 9 accounts)
 - All wallet files are encrypted using the password from `wallets_password.txt`
+
+## *Challenge proof*
+
+Funding transaction hashes: [txs_hash.txt](txs_hash.txt)
 
 ### [HOME](../README.md)

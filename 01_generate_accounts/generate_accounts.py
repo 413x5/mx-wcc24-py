@@ -3,8 +3,8 @@ from pathlib import Path
 import subprocess
 
 CHAIN = "D"
-SHARDS = 1
-ACCOUNTS = 1
+SHARDS = 3
+ACCOUNTS = 3
 
 ROOT_PATH = Path(__file__).parent.parent
 PASSFILE_PATH = ROOT_PATH/"wallets_password.txt"
@@ -79,7 +79,7 @@ def fund_accounts():
         if(exit_code.returncode != 0):
             print(f"Error executing faucet for account {filename}. Check mxpy installation")
             
-    print("\nDone")    
+    print("\nDone.\n")    
 
 
 def main():
