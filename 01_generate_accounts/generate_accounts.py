@@ -12,11 +12,14 @@ ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
 MNEMONIC_PATH = ROOT_PATH/"_accounts/mnemonic"
 
 
+def read_accounts_password():
+    with open(PASSFILE_PATH, "r") as f:
+        return f.read().strip()
+
 def generate_account_for_shard(target_shard: int):
 
     address_computer = AddressComputer()
-    with open(PASSFILE_PATH, "r") as passfile: 
-        password = passfile.read()
+    password = read_accounts_password()
 
     while True:
         mnemonic = Mnemonic.generate()
@@ -53,7 +56,7 @@ def create_accounts():
             # Save json files
             json_file = ACC_JSON_PATH / f"{account_filename}.json"
             wallet.save(json_file)
-            print(f"Json saved to: {json_file}")
+            print(f"Account saved to: {json_file}")
 
             # Save mnemonic files
             mnemonic_file = MNEMONIC_PATH / f"{account_filename}.mnemonic"

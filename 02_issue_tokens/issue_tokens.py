@@ -24,14 +24,19 @@ ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
 TOKEN_FILE_PATH = ROOT_PATH/"_tokens"
 
 
-def save_token_file(ticker: str):
-    token_file = TOKEN_FILE_PATH / f"{ticker}"
+def read_accounts_password():
+    with open(PASSFILE_PATH, "r") as f:
+        return f.read().strip()
+
+
+def save_token_file(ticker: str, ownerAddress: Address):
+    token_file = TOKEN_FILE_PATH / f"{ticker}.token"
     with open(token_file, "w") as f:
-        f.write(ticker)
+        f.write(ownerAddress.to_bech32())
     print(f"Token file saved to {token_file}")
 
 
-def process_transaction_result(tx_hash: str):
+def process_transaction_result(tx_hash: str, ownerAddress: Address):
 
     print("Process transaction hash:", tx_hash)
 
@@ -70,7 +75,7 @@ def process_transaction_result(tx_hash: str):
             if(event.identifier == "issue"):
                 ticker = event.topics[0].decode()
                 print(f"Successfully issued token {ticker}")
-                save_token_file(ticker)
+                save_token_file(ticker, ownerAddress)
                 return
         print(f"Cannot find issue event in transaction {tx_hash}")
     else:
@@ -106,7 +111,7 @@ def issue_tokens_for_account(address: Address, userSigner: UserSigner):
             
             print("Sending issue transaction...")
             tx_hash = PROXY.send_transaction(tx)
-            process_transaction_result(tx_hash)
+            process_transaction_result(tx_hash, address)
             
     except Exception as e:
         print(f"Error for address {address.to_bech32()}: {str(e)}")
@@ -114,8 +119,7 @@ def issue_tokens_for_account(address: Address, userSigner: UserSigner):
 
 def issue_tokens():
     try:
-        with open(PASSFILE_PATH, "r") as passfile:
-            password = passfile.read()
+        password = read_accounts_password()
 
         json_files = list(ACC_JSON_PATH.glob("*.json"))
         if len(json_files) == 0:

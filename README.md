@@ -23,12 +23,11 @@ Required packages:
 
 ### 01. [Generate Accounts](01_generate_accounts/README.md) ([01_generate_accounts/](01_generate_accounts/))
 Generates MultiversX accounts on devnet (3 accounts per shard) and requests xEGLD from the faucet.
-Generated files are stored in:
-- `_accounts/json/` - Encrypted wallet files
-- `_accounts/mnemonic/` - Mnemonic phrases for each wallet
 
 ### 02. [Issue Tokens](02_issue_tokens/README.md) ([02_issue_tokens/](02_issue_tokens/))
-Issues WINTER fungible tokens to each account generated in step 01 and saves the token IDs.
+Issues WINTER ESDT fungible tokens to each account generated in step 01 and saves the token IDs.
 
-Generated files are stored in:
-- `_tokens/` - Token IDs for each account
+### 03. [Transfer Tokens](03_transfer_tokens/README.md) ([03_transfer_tokens/](03_transfer_tokens/))
+
+Performs WINTER ESDT token transfers from token owner accounts generated in step 02 to multiple configurable receiver addresses.
+
