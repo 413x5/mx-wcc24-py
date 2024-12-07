@@ -1,0 +1,1 @@
+Create a script that issues tokens (fungible) one for each account generated on step 01, with a supply of 100 million tokens each.
