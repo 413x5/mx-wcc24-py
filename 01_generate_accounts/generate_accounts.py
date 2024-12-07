@@ -15,7 +15,8 @@ MNEMONIC_PATH = ROOT_PATH/"_accounts/mnemonic"
 def generate_account_for_shard(target_shard: int):
 
     address_computer = AddressComputer()
-    password = open(PASSFILE_PATH, "r").read()
+    with open(PASSFILE_PATH, "r") as passfile: 
+        password = passfile.read()
 
     while True:
         mnemonic = Mnemonic.generate()
