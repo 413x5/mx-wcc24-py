@@ -25,7 +25,7 @@ def get_accounts():
         accounts.append(json_file)
     return accounts
 
-def get_account_transactions(address, from_idx=0, size=100):
+def get_account_transactions_from_api(address, from_idx=0, size=100):
     api_url = f"{API_URL}/accounts/{address}/transactions"
     params = {
         'from': from_idx,
@@ -68,7 +68,7 @@ def get_transactions(address, tx_count = None):
     
     for from_idx in range(0, tx_count, batch_size):
         print(f"Fetching transactions {from_idx + 1} to {min(from_idx + batch_size, tx_count)}...")
-        batch = get_account_transactions(address, from_idx, batch_size)
+        batch = get_account_transactions_from_api(address, from_idx, batch_size)
         if batch:
             transactions.extend(batch)
         else:
