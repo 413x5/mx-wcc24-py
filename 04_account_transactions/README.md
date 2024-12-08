@@ -60,3 +60,7 @@ For each transaction, the script displays:
 The script interacts with the following MultiversX DevNet API endpoints:
 - Transaction Count: `/accounts/{address}/transactions/count`
 - Transaction Details: `/accounts/{address}/transactions?from={index}&size={batch_size}`
+
+## *Challenge proof*
+
+Transactions files: [transactions.json](transactions.json)
