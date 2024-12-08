@@ -29,5 +29,5 @@ Issues WINTER ESDT fungible tokens to each account generated in step 01 and save
 
 ### 03. [Transfer Tokens](03_transfer_tokens/README.md) ([03_transfer_tokens/](03_transfer_tokens/))
 
-Performs WINTER ESDT token transfers from token owner accounts generated in step 02 to multiple configurable receiver addresses.
+Performs WINTER token transfers from the tokens issued in step 02 to multiple configurable receiver addresses.
 

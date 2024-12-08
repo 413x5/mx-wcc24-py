@@ -1,14 +1,14 @@
 # 02. Issue Tokens
 
-This script issues MultiversX tokens on the devnet for each previously generated account, creating test tokens for development and testing purposes.
+This script issues configurable MultiversX ESDT fungible tokens.
 
 ## Features
 
 - Issues tokens for each account generated in the [Previous Script](../01_generate_accounts/README.md)
 - Creates tokens with configurable parameters (name, ticker, supply, decimals)
 - Automatically processes and verifies transactions
-- Saves token information for future reference
 - Handles transaction monitoring and confirmation
+- Saves token information
 
 ## Configuration Parameters
 
@@ -24,14 +24,12 @@ The script uses the following default parameters:
 The script generates token information files in the `_tokens` directory:
 
 ### Token Files (`_tokens/`)
-Files containing token identifiers in the format: `WINTER-a1f6d2`
+Files named in the format: `{token_ticker}.token`, containing the owner's address,
 
 ## Prerequisites
 
 - Generated accounts from the account generator script
 - Sufficient EGLD balance in the issuer account for token creation fees
-- MultiversX SDK Python package
-- Access to MultiversX devnet
 
 ## Usage
 
