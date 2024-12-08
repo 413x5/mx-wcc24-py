@@ -57,24 +57,24 @@ def get_transaction_count(address):
         print(f"Error fetching transaction count: {e}")
         return None
 
-def get_all_transactions(address, tx_count = None):
+def get_transactions(address, tx_count = None):
     if tx_count is None:
         tx_count = get_transaction_count(address)
         if tx_count is None:
             return None
         
-    all_transactions = []
+    transactions = []
     batch_size = BATCH_SIZE
     
     for from_idx in range(0, tx_count, batch_size):
         print(f"Fetching transactions {from_idx + 1} to {min(from_idx + batch_size, tx_count)}...")
         batch = get_account_transactions(address, from_idx, batch_size)
         if batch:
-            all_transactions.extend(batch)
+            transactions.extend(batch)
         else:
             break
             
-    return all_transactions
+    return transactions
 
 def display_transactions(transactions):
     if not transactions:
@@ -123,7 +123,7 @@ def main():
         print(f"Transaction count: {tx_count}")
         
         input("Press any key to fetch transactions...")     
-        transactions = get_all_transactions(address, tx_count)
+        transactions = get_transactions(address, tx_count)
         display_transactions(transactions)
 
         # Save transactions for this account immediately
