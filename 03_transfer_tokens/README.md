@@ -44,12 +44,12 @@ The script will automatically:
 
 ## *Challenge proof*
 
-- *WINTER-3efa97*
-- *WINTER-4f8d6d*
-- *WINTER-37a258*
-- *WINTER-4794dc*
-- *WINTER-c27ab7*
-- *WINTER-ca2868*
-- *WINTER-cbfbc6*
-- *WINTER-e7db4d*
-- *WINTER-fd400b*
+- [WINTER-3efa97](https://devnet-explorer.multiversx.com/tokens/WINTER-3efa97)
+- [WINTER-4f8d6d](https://devnet-explorer.multiversx.com/tokens/WINTER-4f8d6d)
+- [WINTER-37a258](https://devnet-explorer.multiversx.com/tokens/WINTER-37a258)
+- [WINTER-4794dc](https://devnet-explorer.multiversx.com/tokens/WINTER-4794dc)
+- [WINTER-c27ab7](https://devnet-explorer.multiversx.com/tokens/WINTER-c27ab7)
+- [WINTER-ca2868](https://devnet-explorer.multiversx.com/tokens/WINTER-ca2868)
+- [WINTER-cbfbc6](https://devnet-explorer.multiversx.com/tokens/WINTER-cbfbc6)
+- [WINTER-e7db4d](https://devnet-explorer.multiversx.com/tokens/WINTER-e7db4d)
+- [WINTER-fd400b](https://devnet-explorer.multiversx.com/tokens/WINTER-fd400b)
