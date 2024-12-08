@@ -47,5 +47,3 @@ The script will automatically:
 ## *Challenge proof*
 
 Issue transaction hashes: [txs_hash.txt](txs_hash.txt)
-
-### [HOME](../README.md)

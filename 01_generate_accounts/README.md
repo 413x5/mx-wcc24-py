@@ -44,5 +44,3 @@ python3 generate_accounts.py
 ## *Challenge proof*
 
 Funding transaction hashes: [txs_hash.txt](txs_hash.txt)
-
-### [HOME](../README.md)
