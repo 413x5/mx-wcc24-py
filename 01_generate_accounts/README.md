@@ -5,9 +5,10 @@ This script generates MultiversX accounts on the devnet and requests xEGLD from 
 ## Prerequisites
 
 Before running the script, ensure you have:
-1. Set up the Python environment (see main [README](../README.md))
+
+1. Set up the Python environment (see main [Readme](../README.md))
 2. Created a `wallets_password.txt` file in the root directory containing the password for encrypting the wallets
-3. `mxpy` installed for automated faucet funding requests. Details [here](https://docs.multiversx.com/sdk-and-tools/sdk-py/installing-mxpy)
+3. `mxpy` installed for automated faucet funding requests. [Details here](https://docs.multiversx.com/sdk-and-tools/sdk-py/installing-mxpy)
 
 ## Features
 
@@ -21,15 +22,17 @@ Before running the script, ensure you have:
 The script generates two types of files in the `_accounts` directory:
 
 ### Wallet Files (`_accounts/json/`)
+
 Files are named in the format: `s{shard_number}_a{account_number}_{address}.json`
 
 ### Mnemonic Files (`_accounts/mnemonic/`)
-Corresponding mnemonic phrases are saved in: `s{shard_number}_a{account_number}_{address}.mnemonic`
 
+Corresponding mnemonic phrases are saved in: `s{shard_number}_a{account_number}_{address}.mnemonic`
 
 ## Usage
 
 Run the script:
+
 ```bash
 python3 generate_accounts.py
 ```

@@ -13,6 +13,7 @@ This script issues configurable MultiversX ESDT fungible tokens.
 ## Configuration Parameters
 
 The script uses the following default parameters:
+
 - Token Name: "WinterIsComing"
 - Token Ticker: "WINTER"
 - Initial Supply: 100,000,000
@@ -24,6 +25,7 @@ The script uses the following default parameters:
 The script generates token information files in the `_tokens` directory:
 
 ### Token Files (`_tokens/`)
+
 Files named in the format: `{token_ticker}.token`, containing the owner's address,
 
 ## Prerequisites
@@ -34,11 +36,13 @@ Files named in the format: `{token_ticker}.token`, containing the owner's addres
 ## Usage
 
 Run the script using Python:
+
 ```bash
 python3 issue_tokens.py
 ```
 
 The script will automatically:
+
 1. Load the previously generated accounts
 2. Issue tokens for each account
 3. Save token information
