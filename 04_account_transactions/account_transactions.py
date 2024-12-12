@@ -17,8 +17,8 @@ from multiversx_sdk.network_providers.api_network_provider import (
 
 ROOT_PATH = Path(__file__).parent.parent
 TRANSACTIONS_FILE = Path(__file__).parent / "transactions.json"
-PASSFILE_PATH = ROOT_PATH/"wallets_password.txt"
-ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
+PASSFILE_PATH = ROOT_PATH / "wallets_password.txt"
+ACC_JSON_PATH = ROOT_PATH / "_accounts/json"
 
 
 BATCH_SIZE = 100  # Number of transactions to fetch in each batch
