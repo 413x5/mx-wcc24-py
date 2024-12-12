@@ -42,10 +42,10 @@ Performs WINTER token transfers from the tokens issued in Step 02 to multiple co
 
 Retrieves and displays transaction history for MultiversX accounts generated in previous steps, using the MultiversX DevNet API.
 
-### 05. [Token Smart Contract](https://github.com/413x5/mx-wcc24-rs/tree/main)
+### *[Token Smart Contract](https://github.com/413x5/mx-wcc24-rs/tree/main)*
 
 The token manager smart contract rust implementation and instructions for issuing the SNOW ESDT tokens.
 
-### 06. [Claim Tokens](05_claim_tokens/README.md)
+### 05. [Claim Tokens](05_claim_tokens/README.md)
 
 Claims SNOW ESDT tokens from the token smart contract for each account in Step 01.
