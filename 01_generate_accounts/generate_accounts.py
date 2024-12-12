@@ -1,5 +1,5 @@
 """
-This script generates MultiversX accounts on the devnet and requests xEGLD 
+This script generates MultiversX accounts on the devnet and requests xEGLD
 from the faucet for funding each account.
 """
 from pathlib import Path
@@ -15,9 +15,9 @@ SHARDS = 3
 ACCOUNTS = 3
 
 ROOT_PATH = Path(__file__).parent.parent
-PASSFILE_PATH = ROOT_PATH/"wallets_password.txt"
-ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
-MNEMONIC_PATH = ROOT_PATH/"_accounts/mnemonic"
+PASSFILE_PATH = ROOT_PATH / "wallets_password.txt"
+ACC_JSON_PATH = ROOT_PATH / "_accounts/json"
+MNEMONIC_PATH = ROOT_PATH / "_accounts/mnemonic"
 
 
 def read_accounts_password():
@@ -85,7 +85,7 @@ def create_accounts():
             print(f"Address: {address.bech32()}")
 
             # Save account files
-            account_filename = f"s{shard}_a{acc+1}_{address.bech32()}"
+            account_filename = f"s{shard}_a{acc + 1}_{address.bech32()}"
 
             # Save json files
             json_file = ACC_JSON_PATH / f"{account_filename}.json"
@@ -124,7 +124,7 @@ def fund_accounts():
                                     "--keyfile", str(json_file_path),
                                     "--passfile", str(PASSFILE_PATH),
                                     "--chain", CHAIN], check=True)
-        if (exit_code.returncode != 0):
+        if exit_code.returncode != 0:
             print(f"Error executing faucet for account {
                   filename}. Check mxpy installation")
 

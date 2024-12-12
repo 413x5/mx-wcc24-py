@@ -22,10 +22,10 @@ RECEIVERS_COUNT = 1000
 TRANSACTIONS_BATCH_SIZE = 100  # Number of transactions to send in each batch
 
 ROOT_PATH = Path(__file__).parent.parent
-PASSFILE_PATH = ROOT_PATH/"wallets_password.txt"
-ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
-TOKEN_FILE_PATH = ROOT_PATH/"_tokens"
-RECEIVERS_FILE = ROOT_PATH/"receivers.txt"
+PASSFILE_PATH = ROOT_PATH / "wallets_password.txt"
+ACC_JSON_PATH = ROOT_PATH / "_accounts/json"
+TOKEN_FILE_PATH = ROOT_PATH / "_tokens"
+RECEIVERS_FILE = ROOT_PATH / "receivers.txt"
 
 
 def read_accounts_password():
@@ -156,7 +156,7 @@ def transfer_tokens(
                 token_transfers=[
                     TokenTransfer(
                         token=Token(token_id),
-                        amount=TRANSFER_AMOUNT*10**TOKEN_DECIMALS
+                        amount=TRANSFER_AMOUNT * 10**TOKEN_DECIMALS
                     )
                 ]
             )

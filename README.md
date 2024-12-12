@@ -24,7 +24,7 @@ Required packages:
 
 - multiversx-sdk>=0.19.0
 
-## Scripts
+## Steps
 
 ### 01. [Generate Accounts](01_generate_accounts/README.md)
 

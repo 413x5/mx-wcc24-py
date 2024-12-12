@@ -15,8 +15,8 @@ GATEWAY = "https://devnet-gateway.multiversx.com"
 PROXY = ProxyNetworkProvider(GATEWAY)
 
 ROOT_PATH = Path(__file__).parent.parent
-PASSFILE_PATH = ROOT_PATH/"wallets_password.txt"
-ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
+PASSFILE_PATH = ROOT_PATH / "wallets_password.txt"
+ACC_JSON_PATH = ROOT_PATH / "_accounts/json"
 
 SC_ADDRESS = "erd1qqqqqqqqqqqqqpgqc50cgesrvkpurrxkclz4qql7ukg36uxjjpzqayczg3"
 FUNCTION_NAME = "claim_tokens"
@@ -65,7 +65,7 @@ def claim_tokens_for_account(account_address: Address, signer: UserSigner):
         gas_limit=10000000,
         arguments=[
             TOKEN_ID,
-            CLAIM_AMOUNT*10**TOKEN_DECIMALS
+            CLAIM_AMOUNT * 10**TOKEN_DECIMALS
         ]
     )
     # get the nonce

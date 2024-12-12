@@ -1,4 +1,5 @@
 .DS_Store
+.flake8
 .venv/
 _test/
 _live/

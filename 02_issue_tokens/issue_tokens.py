@@ -24,9 +24,9 @@ TOKEN_INITIAL_SUPPLY = 100000000
 TOKEN_DECIMALS = 8
 
 ROOT_PATH = Path(__file__).parent.parent
-PASSFILE_PATH = ROOT_PATH/"wallets_password.txt"
-ACC_JSON_PATH = ROOT_PATH/"_accounts/json"
-TOKEN_FILE_PATH = ROOT_PATH/"_tokens"
+PASSFILE_PATH = ROOT_PATH / "wallets_password.txt"
+ACC_JSON_PATH = ROOT_PATH / "_accounts/json"
+TOKEN_FILE_PATH = ROOT_PATH / "_tokens"
 
 
 def read_accounts_password():
@@ -127,7 +127,7 @@ def issue_tokens_for_account(address: Address, user_signer: UserSigner):
                 sender=address,
                 token_name=TOKEN_NAME,
                 token_ticker=TOKEN_TICKER_NAME,
-                initial_supply=TOKEN_INITIAL_SUPPLY*10**TOKEN_DECIMALS,
+                initial_supply=TOKEN_INITIAL_SUPPLY * 10**TOKEN_DECIMALS,
                 num_decimals=TOKEN_DECIMALS,
                 can_freeze=True,
                 can_wipe=True,
