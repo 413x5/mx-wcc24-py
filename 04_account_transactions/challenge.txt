@@ -1,1 +1,0 @@
-Create a script that queries the blockchain to retrieve and display the list of transactions for each of the generated account.
