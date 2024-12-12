@@ -9,9 +9,9 @@ Before running the script, ensure you have:
 1. Generated wallet accounts using Step 01
 2. [Token smart contract](https://github.com/413x5/mx-wcc24-rs/tree/main) deployed and having issued at least one SNOW token
 3. Configured the token smart contract address in the `SC_ADDRESS` variable
-3. Configure the SNOW token ID in the `TOKEN_ID` variable
-4. Configure the claim amount in the `CLAIM_AMOUNT` variable
-5. Sufficient EGLD in your accounts for transaction fees
+4. Configured the SNOW token ID in the `TOKEN_ID` variable
+5. Configured the claim amount in the `CLAIM_AMOUNT` variable
+6. Sufficient EGLD in your accounts for transaction fees
 
 ## Features
 
