@@ -1,6 +1,7 @@
 .DS_Store
 .flake8
 .venv/
+__pycache__/
 _test/
 _live/
 _accounts/

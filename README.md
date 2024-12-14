@@ -49,3 +49,7 @@ The token manager smart contract rust implementation and instructions for issuin
 ### 05. [Claim Tokens](05_claim_tokens/README.md)
 
 Claims SNOW ESDT tokens from the token smart contract for each account in Step 01.
+
+### 06. [Token Leaderboard](06_tokens_leaderboard/README.md)
+
+Generates a leaderboard of token holders for WINTER ESDT tokens.
