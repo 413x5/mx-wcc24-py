@@ -124,8 +124,11 @@ def generate_leaderboard(token_holders):
             token_groups[holder.token_id] = []
         token_groups[holder.token_id].append(holder)
 
-    # Sort tokens by number of holders in descending order
-    sorted_tokens = sorted(token_groups.items(), key=lambda x: len(x[1]), reverse=True)
+    # Sort tokens by number of holders in descending order, then by token name
+    sorted_tokens = sorted(
+        token_groups.items(),
+        key=lambda x: (-len(x[1]), x[1][0].token_name)  # Sort by -holder_count (desc), then token_name (asc)
+    )
     total_tokens = len(sorted_tokens)
 
     display_batch = 0
@@ -168,7 +171,7 @@ def generate_leaderboard(token_holders):
     return output
 
 
-def save_holders_cache(token_holders: List[TokenHolder]):
+def save_holders_to_cache(token_holders: List[TokenHolder]):
     '''
     Saves the list of token holders to the cache file.
     '''
@@ -176,7 +179,7 @@ def save_holders_cache(token_holders: List[TokenHolder]):
         json.dump([holder.to_dict() for holder in token_holders], f, indent=4)
 
 
-def load_holders_cache() -> List[TokenHolder]:
+def load_holders_from_cache() -> List[TokenHolder]:
     '''
     Loads the list of token holders from the cache file.
     '''
@@ -186,13 +189,13 @@ def load_holders_cache() -> List[TokenHolder]:
 
 def main():
     if (Path(HOLDERS_DATA_CACHE).exists() and
-            input("\nFound token holders data cache file. Use it (y), or get new data from API?") == "y"):
+            input("\nFound token holders data cache file. Press 'y' to use it, or any other key to get new data from API...") == "y"):
         print("\nReading token holders data from cache...")
-        token_holders = load_holders_cache()
+        token_holders = load_holders_from_cache()
     else:
         print("\nReading token holders data from API...")
         token_holders = get_holders_data_from_api()
-        save_holders_cache(token_holders)
+        save_holders_to_cache(token_holders)
         print(f"\nToken holders saved to: {HOLDERS_DATA_CACHE}")
 
     output = generate_leaderboard(token_holders)
