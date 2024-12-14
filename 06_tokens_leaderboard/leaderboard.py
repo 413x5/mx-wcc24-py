@@ -141,22 +141,22 @@ def generate_leaderboard(token_holders):
             input(f"\nPress any key to display next {display_batch} tokens...")
 
         # Sort holders by amount in descending order
-        sorted_holders = sorted(holders, key=lambda x: x.balance, reverse=True)
+        sorted_holders = sorted(holders, key=lambda x: int(x.balance), reverse=True)
         top_holders = sorted_holders[:DISPLAY_TOP_HOLDERS]
         total_holders = len(sorted_holders)
         actual_holders_count = len(top_holders)
 
         header = f"\nToken {token_index}/{total_tokens}: Top {actual_holders_count} out of {total_holders:,} holders"
         subheader = f"Token ID: {token_id} Name: {holders[0].token_name}"
-        separator = "-" * 100
-        table_header = f"{'Rank':<4} | {'Address':<62} | {'Balance':<20}"
+        separator = "-" * 112
+        table_header = f"{'Rank':<4} | {'Address':<62} | {'Balance':<30}"
 
         # Calculate the number of lines in this token's display
         display_lines = [header, subheader, separator, table_header, separator]
         # Add the top holders
         for rank, holder in enumerate(top_holders, 1):
             formatted_balance = format_balance(holder.balance)
-            line = f"{rank:<4} | {holder.address:<62} | {formatted_balance:>20}"
+            line = f"{rank:<4} | {holder.address:<62} | {formatted_balance:>40}"
             display_lines.append(line)
         display_lines.append(separator)
         # Add to the output
